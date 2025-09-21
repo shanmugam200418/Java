@@ -198,3 +198,316 @@ class SBICreditCardEligibility {
         }
     }
 }
+
+
+
+Q.11)
+import java.util.Scanner;
+class github{
+    public static void main(String args[])
+    {
+        Scanner sk = new Scanner(System.in);
+        int a = sk.nextInt();
+        int b = sk.nextInt();
+        int c = sk.nextInt();
+        if(a==b && a==c){
+            System.out.println("Equilateral triangle");
+        }
+        else if (a==b || b==c || a==c)
+        {
+            System.out.println("Isosceles triangle");
+        }
+        else{
+            System.out.println("Scalene triangle");
+        }
+    }
+}    
+
+Q.12)
+import java.util.*;
+public class DescendingOrder {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[4];
+        for (int i = 0; i < 4; i++) {
+            arr[i] = sc.nextInt();
+        }
+        Arrays.sort(arr);
+        for (int i = 3; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        sc.close();
+    }
+}
+
+Q.13)
+import java.util.*;
+public class CharacterType {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            System.out.println("alphabet");
+        } else if (ch >= '0' && ch <= '9') {
+            System.out.println("digit");
+        } else {
+            System.out.println("special");
+        }
+        sc.close();
+    }
+}
+
+Q.14)
+import java.util.Scanner;
+class github{
+    public static void main(String args[])
+    {
+        Scanner sk = new Scanner(System.in);
+        System.out.print("Enter the Number :");
+        int n = sk.nextInt();
+        for(int i=1;i<=n;i++){
+            if(i%2==0)
+            System.out.print(i+" ");
+        }
+    }
+}            
+
+Q.15)
+import java.util.Scanner;
+class github{
+    public static void main(String args[])
+    {
+        Scanner sk = new Scanner(System.in);
+        System.out.print("Enter the Number :");
+        int n = sk.nextInt();
+        int sum = 0;
+        for(int i=2;i<=n;i+=2){
+            sum+=i;
+        }    
+            System.out.print(sum);
+    }
+}            
+
+Q.16)
+import java.util.*;
+public class SumOddEven {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sumOdd = 0, sumEven = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                sumEven += i;
+            } else {
+                sumOdd += i;
+            }
+        }
+        System.out.println(sumOdd + " " + sumEven);
+        sc.close();
+    }
+}
+
+Q.17)
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n < 0) {
+            System.out.println("Error! Factorial of a negative number doesn't exist.");
+        } else {
+            long fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            System.out.println(fact);
+        }
+    }
+}
+
+Q.18)
+import java.util.Scanner;
+public class PrintDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int length = String.valueOf(n).length();
+        for (int i = 0; i < length; i++) {
+            int digit = n % 10;    
+            System.out.print(digit + " ");
+            n = n / 10;          
+        }
+    }
+}
+
+Q19)
+import java.util.Scanner;
+public class SumDivisible {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int start = sc.nextInt();
+        int end = sc.nextInt();
+        int sum = 0;
+        for (int i = start; i <= end; i++) {
+            if (i % 3 == 0 || i % 5 == 0) {
+                sum += i;
+            }
+        }
+        System.out.println(sum);
+        sc.close();
+    }
+}
+
+
+Q20)
+import java.util.Scanner;
+public class DigitCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        n = Math.abs(n);
+        int count = 0;
+        if (n == 0) {
+            count = 1; // Special case: 0 has 1 digit
+        } else {
+            while (n > 0) {
+                count++;
+                n /= 10;
+            }
+        }
+        System.out.println(count);
+        sc.close();
+    }
+}
+
+Q21) Sum of Digits
+import java.util.Scanner;
+public class Sum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        n = Math.abs(n); 
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;  
+            n /= 10;       
+        }
+        System.out.println(sum);
+        sc.close();
+    }
+}
+
+Q22) 
+import java.util.Scanner;
+public class HarshadNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = Math.abs(n); 
+        int sum = 0;
+        while (temp > 0) {
+            sum += temp % 10;
+            temp /= 10;
+        }
+        if (sum != 0 && n % sum == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not Harshad Number");
+        }
+        sc.close();
+    }
+}
+
+Q23)
+import java.util.Scanner;
+public class PerfectNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n <= 0) {
+            System.out.println("Not Perfect Number"); 
+            sc.close();
+            return;
+        }
+        int sum = 0;
+        for (int i = 1; i <= n / 2; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == n) {
+            System.out.println("Perfect Number");
+        } else {
+            System.out.println("Not Perfect Number");
+        }
+        sc.close();
+    }
+}
+
+Q24)
+import java.util.Scanner;
+public class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n <= 1) {
+            System.out.println("Not Prime");
+        } else {
+            boolean isPrime = true;
+            for (int i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println("Prime");
+            } else {
+                System.out.println("Not Prime");
+            }
+        }
+        sc.close();
+    }
+}
+
+Q25)
+import java.util.Scanner;
+public class PerfectSquareCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if (n < 0) {
+            System.out.println("Not Perfect Square");
+        } else {
+            int sqrt = (int)Math.sqrt(n);  
+            if (sqrt * sqrt == n) {
+                System.out.println("Perfect Square");
+            } else {
+                System.out.println("Not Perfect Square");
+            }
+        }
+        sc.close();
+    }
+}
+
+Q26)
+import java.util.Scanner;
+public class FibonacciSeries {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int a = 0, b = 1;
+        for (int i = 1; i <= N; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        sc.close();
+    }
+}
